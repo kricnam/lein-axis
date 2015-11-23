@@ -1,44 +1,42 @@
-# lein-axis
-Simple Leiningen plug-in to speed up working with Apache Axis and WSDL files
+# lein-axis2
+Simple Leiningen plug-in to speed up working with Apache Axis2 and WSDL files
 
 ## Usage
-Use Apache Axis to generate Java classes for WSDL files.
+Use Apache Axis2 to generate Java classes from WSDL files.
 
-You will need to add Apache Axis to your project as a dependency, e.g.:
-    :dependencies [[org.clojure/clojure "1.2.0"]
-                   [org.clojure/clojure-contrib "1.2.0"]
+You will need to add Apache Axis2 to your project as a dependency, e.g.:
+    :dependencies [[org.clojure/clojure "1.7.0"]
                    [axis/axis "1.4"]]
 
-Also, this plug-in should be added to your project as a dev-dependency:
+Also, this plug-in should be added to your project as a development dependency:
 
-    :dev-dependencies [[lein-axis "0.2"]]
+    :profiles {:dev {:dependencies [[lein-axis "0.1.0"]]}}
 
 Then, to configure what WSDL files to use and where to put the generated
 source files:
 
-    :java-source-path "src/java"
+    :generated-code-root "./"
+    :generated-source-path "src/java"
+    :generated-res-path "src/resources"
     :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 
 Then, simply run:
 
     $ lein deps
-    $ lein axis
+    $ lein axis2
 
-Note that :java-source-path is used by the lein-javac plug-in, which is
-probably the easiest way to turn the Java code generated into compiled
-classes. lein-axis uses this setting as the target directory (for the
-root of the generated packages). src/java is used as a default if you
-don't provide this value.
+lein-axis2 uses this as default setting to save the generated code.
+the detailed params on genrating code, pleas refer:
+http://axis.apache.org/axis2/java/core/docs/reference.html
+
 
 If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:
 
-    :axis ["src/wsdl/myservice.wsdl" "generated.myservice" ["-s"]]
+    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
 
 
 ## License
-
-Copyright (C) 2010 James Aley.
 
 Distributed under the Eclipse Public License, the same as Clojure.
