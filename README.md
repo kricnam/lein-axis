@@ -36,8 +36,9 @@ you can do this per-WSDL file, like so:
 
     :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
 
-the detailed params on genrating code, pleas refer:
+the detailed params on genrating code, please refer:
 http://axis.apache.org/axis2/java/core/docs/reference.html
+
 ## License
 
 Distributed under the Eclipse Public License, the same as Clojure.
