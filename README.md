@@ -5,8 +5,9 @@ Simple Leiningen plug-in to speed up working with Apache Axis2 and WSDL files
 Use Apache Axis2 to generate Java classes from WSDL files.
 
 You will need to add Apache Axis2 to your project as a dependency, e.g.:
+
     :dependencies [[org.clojure/clojure "1.7.0"]
-                   [axis/axis "1.4"]]
+                   [org.apache.axis2/axis2 "1.6.3"]]
 
 Also, this plug-in should be added to your project as a development dependency:
 
