@@ -20,7 +20,7 @@ source files:
     :generated-code-root "./"
     :generated-source-path "src/java"
     :generated-res-path "src/resources"
-    :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
+    :axis2 [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 
 Then, simply run:
@@ -36,7 +36,7 @@ you can do this per-WSDL file, like so:
 
     :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
 
-the detailed params on genrating code, please refer:
+the detailed params on generating code, please refer:
 http://axis.apache.org/axis2/java/core/docs/reference.html
 
 ## License
