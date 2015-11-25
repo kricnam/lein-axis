@@ -41,4 +41,6 @@ http://axis.apache.org/axis2/java/core/docs/reference.html
 
 ## License
 
+Copyright (C) 2010 James Aley.
+
 Distributed under the Eclipse Public License, the same as Clojure.
