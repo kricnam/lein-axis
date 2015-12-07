@@ -34,7 +34,9 @@ lein-axis2 uses this as default setting to save the generated code.
 If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:
 
-    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
+    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" "-ss" "-sd"]
+
+that generate WSDL and service desciption(ie. services.xml).
 
 the detailed params on generating code, please refer:
 http://axis.apache.org/axis2/java/core/docs/reference.html
