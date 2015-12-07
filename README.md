@@ -17,6 +17,7 @@ Then, to configure what WSDL files to use and where to put the generated
 source files:
 
     :plugins [[lein-axis2 "0.1.0"]]
+
     :axis2-gen-root "./"
     :axis2-gen-java "src/java"
     :axis2-gen-meta "src/resources"
@@ -34,11 +35,15 @@ lein-axis2 uses this as default setting to save the generated code.
 If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:
 
-    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
+    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" "-ss" "-sd"]
 
-the detailed params on genrating code, please refer:
+that generate WSDL and service desciption(ie. services.xml).
+
+the detailed params on generating code, please refer:
 http://axis.apache.org/axis2/java/core/docs/reference.html
 
 ## License
+
+Copyright (C) 2010 James Aley.
 
 Distributed under the Eclipse Public License, the same as Clojure.
