@@ -44,9 +44,10 @@
 source files:</p>
 
 <pre><code>:plugins [[lein-axis2 "0.1.0"]]
-:generated-code-root "./"
-:generated-source-path "src/java"
-:generated-res-path "src/resources"
+
+:axis2-gen-root "./"
+:axis2-gen-java "src/java"
+:axis2-gen-meta "src/resources"
 :axis2 [["src/wsdl/myservice.wsdl" "generated.myservice"]
        ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 </code></pre>
@@ -62,14 +63,18 @@ $ lein axis2
 <p>If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:</p>
 
-<pre><code>:axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss"]]
+<pre><code>:axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss" "-sd"]]
 </code></pre>
+
+<p>that generate WSDL and service desciption(ie. services.xml).</p>
 
 <p>the detailed params on generating code, please refer:
 <a href="http://axis.apache.org/axis2/java/core/docs/reference.html">http://axis.apache.org/axis2/java/core/docs/reference.html</a></p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (C) 2010 James Aley.</p>
 
 <p>Distributed under the Eclipse Public License, the same as Clojure.</p>
 
