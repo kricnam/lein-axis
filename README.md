@@ -21,7 +21,7 @@ source files:
     :axis2-gen-root "./"
     :axis2-gen-java "src/java"
     :axis2-gen-meta "src/resources"
-    :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
+    :axis2 [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 
 Then, simply run:
@@ -35,7 +35,7 @@ lein-axis2 uses this as default setting to save the generated code.
 If you're generating server-side classes, or need to add extra arguments,
 you can do this per-WSDL file, like so:
 
-    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" "-ss" "-sd"]
+    :axis2 ["src/wsdl/myservice.wsdl" "generated.myservice" ["-ss" "-sd"]]
 
 that generate WSDL and service desciption(ie. services.xml).
 

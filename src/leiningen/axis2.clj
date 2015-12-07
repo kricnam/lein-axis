@@ -13,8 +13,8 @@
     "-S" (get p :axis2-gen-java "src/java")
     "-R" (get p :axis2-gen-meta "src/resources")
     "-p" package
-    extra
     "-uri" wsdl]
+    extra
    )
   )
 
@@ -41,7 +41,7 @@
   use \"lein axis2 help\" to see detailed param settings.
   "
   [project & help]
-  (println (cmd project))
+  
   (if (empty? help)
     (doseq [cmd-out (map (comp (partial apply sh)
                                (partial cmd project))
@@ -53,3 +53,4 @@
     (println (:out (sh "java" "-cp" (get-classpath-string project) WSDL2Java-class)))
     )
   )
+
