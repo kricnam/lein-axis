@@ -17,9 +17,9 @@ Then, to configure what WSDL files to use and where to put the generated
 source files:
 
     :plugins [[lein-axis2 "0.1.0"]]
-    :generated-code-root "./"
-    :generated-source-path "src/java"
-    :generated-res-path "src/resources"
+    :axis2-gen-root "./"
+    :axis2-gen-java "src/java"
+    :axis2-gen-meta "src/resources"
     :axis [["src/wsdl/myservice.wsdl" "generated.myservice"]
     	   ["src/wsdl/myotherservice.wsdl" "generated.myotherservice"]]
 
