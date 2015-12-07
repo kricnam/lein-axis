@@ -29,7 +29,7 @@ Then, simply run:
     $ lein deps
     $ lein axis2
 
-lein-axis2 uses this as default setting to save the generated code.
+lein-axis2 uses above path as default setting to save the generated code.
 
 
 If you're generating server-side classes, or need to add extra arguments,
@@ -41,6 +41,12 @@ that generate WSDL and service desciption(ie. services.xml).
 
 the detailed params on generating code, please refer:
 http://axis.apache.org/axis2/java/core/docs/reference.html
+
+or type
+
+    $ lein axis2 help 
+    
+to get the arguments list description
 
 ## License
 
